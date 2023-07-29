@@ -5,14 +5,16 @@ import Product from '../Product/Product';
 const Cart = ({cart}) => { 
     let totalPrice = 0;
     let totalPriceShipping = 0;
+    let quantity = 0;
     
     for(let product of cart){
-     totalPrice = totalPrice + product.price;
+     totalPrice = totalPrice + product.price * product.quantity;
      totalPriceShipping = totalPriceShipping + product.shipping;
+     quantity = quantity + product.quantity;
     }
     const tax = totalPrice*7/100;
     const grandTotal = totalPrice + totalPriceShipping + tax;
-    console.log(cart);
+    // console.log(cart);
 
     return (
         <div className='cart'>
