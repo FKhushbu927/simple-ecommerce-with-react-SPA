@@ -23,8 +23,7 @@ const Shop = () => {
                  const addedProduct = products.find(product => product.id === id);
 
             // step 3 get quantity of the product
-            
-          
+
            if(addedProduct) {
              // step-3 add quantity
              const quantity = storedCart[id];
@@ -63,13 +62,14 @@ const Shop = () => {
             <div className="products-container">
                    {
                     products.map(product => <Product
+                    
                         key = {product.id}
                         product = {product}
                         handleAddToCart = {handleAddToCart}
                     ></Product>)
                    }
             </div>
-            <div>
+            <div className='cart-container'>
                <Cart cart = {cart}></Cart>
             </div>
         </div>
@@ -77,3 +77,4 @@ const Shop = () => {
 };
 
 export default Shop;
+
