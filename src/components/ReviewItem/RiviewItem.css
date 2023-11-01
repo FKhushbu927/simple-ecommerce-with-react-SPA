@@ -1,0 +1,37 @@
+.review-item{
+    width: 571px;
+    height: 95px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 8px;
+    display: flex;
+}
+.review-item img{
+    width: 91px;
+    height: 91px;
+}
+.review-item .review-pro-title{
+          font-weight: 400;
+          font-size: 21px;
+          line-height: 25px;
+         
+}
+
+.review-details p{
+   margin: 0 15px;
+}
+.review-details{
+    flex-grow: 1;
+}
+.btn-delete{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color:  rgb(253, 202, 201);
+    border: none;
+}
+.delete-icon{
+    color: crimson;
+ 
+}
