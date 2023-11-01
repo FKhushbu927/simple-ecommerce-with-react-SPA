@@ -4,12 +4,13 @@ import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 
+
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
 
     useEffect( () =>{
-        fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json ')
+         fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, []);
@@ -55,6 +56,7 @@ const Shop = () => {
 
         }
          setCart(newCart);
+          addToDb(product.id)
      }
 
     return (

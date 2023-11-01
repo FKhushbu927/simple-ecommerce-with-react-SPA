@@ -21,8 +21,8 @@ const Cart = ({cart}) => {
             <h4>Order Summary </h4>
             <div className='cart-info'>
                 <p>Selected Items: {cart.length}</p>
-                <p> totalPrice Price:$  {totalPrice}</p>
-                <p> totalPrice Shipping: $  {totalPriceShipping}</p>
+                <p> totalPrice Price:${totalPrice}</p>
+                <p> totalPrice Shipping: ${totalPriceShipping}</p>
                 <p>Tax: ${tax.toFixed(2)}</p>
                 <h6>Grand Total: ${grandTotal.toFixed(2)} </h6>
             </div>

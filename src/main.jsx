@@ -12,15 +12,9 @@ import Shop from './components/Shop/Shop.jsx';
 import Inventory from './components/Inventory/Inventory.jsx';
 import Home from './components/Layout/Home';
 import Orders from './components/Orders/Orders';
+import cartProductsLoader from './loaders/cartProductsLoader.js';
 
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: <App/>,
-  // },
-  //  {
-  //   path: "/",
-  //   element: <Home/>,
   {
 
     path: "/",
@@ -31,11 +25,13 @@ const router = createBrowserRouter([
     {
       path: "/",
       element: <Shop/>,
+      loader: () => fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json'),
    
     },
     {
       path: "/order",
       element:<Orders/>,
+      loader: cartProductsLoader,
     },
     {
       path: "/inventory",
