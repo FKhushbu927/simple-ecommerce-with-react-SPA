@@ -1,8 +1,10 @@
 import React from 'react';
 import './Cart.css';
 import Product from '../Product/Product';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
-const Cart = ({cart}) => { 
+const Cart = ({cart, handleClearCart}) => { 
     let totalPrice = 0;
     let totalPriceShipping = 0;
     let quantity = 0;
@@ -26,6 +28,10 @@ const Cart = ({cart}) => {
                 <p>Tax: ${tax.toFixed(2)}</p>
                 <h6>Grand Total: ${grandTotal.toFixed(2)} </h6>
             </div>
+
+            <button  onClick={()=>handleClearCart()} className='clear-cart-btn'> <span> Clear cart </span>
+                   <span><FontAwesomeIcon className='clear-cart-icon' icon={faTrashCan} /></span> 
+            </button>
 
         </div>
     );

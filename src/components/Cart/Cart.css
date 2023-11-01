@@ -1,10 +1,24 @@
 .cart {
     background-color: rgba(255, 153, 0, 0.30);
     padding: 25px;
-    position: absolute;
     top: 0;
     position: sticky;
-    top: 20;
+    /* position: absolute;
+    top: 20;*/
+} 
+.clear-cart-btn{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+    background: #fd1414;
+    border-radius: 4px;
+    color: beige;
+    font-weight: 500;
+}
+.clear-cart-icon{
+    color: aliceblue;
+   
 }
 
 .cart-info {
