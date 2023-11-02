@@ -10,3 +10,13 @@
     gap: 45px;
 
 }
+.btn-review-order{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+    background: #fd6a30fd;
+    border-radius: 4px;
+    color: beige;
+    font-weight: 500;
+}
